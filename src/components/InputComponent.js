@@ -8,15 +8,15 @@ import myStyle from '../styles/allStyles';
  */
 const InputComponent = (props) => {
   const { allStyles } = myStyle;
-  const { numberOfInputs } = props;
+  const { numberOfInputs, placeholder, inputType } = props;
   const inputs = [];
   if (numberOfInputs) {
     for (let i = 1; i <= numberOfInputs; i += 1) {
       inputs.push(<TextInput
         style={allStyles.signupInput}
         placeholderTextColor="rgb(255,255,255)"
-        placeholder="Enter your phone number"
-        keyboardType="phone-pad"
+        placeholder={placeholder[i - 1]}
+        keyboardType={inputType[i - 1]}
       />);
     }
   }

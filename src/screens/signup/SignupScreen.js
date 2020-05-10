@@ -6,6 +6,7 @@ import styles from '../../styles/allStyles';
 import getUserData from '../../actions/getUserData';
 
 const { allStyles } = styles;
+
 /**
  * @class
  */
@@ -28,7 +29,7 @@ class SignupScreen extends Component {
     const { getUserData: funcGetData } = this.props;
     return (
       <View style={allStyles.signupFormContainer}>
-        <Text style={allStyles.signupTitle}>Enter your phone number</Text>
+        <Text style={allStyles.signupTitle}>Enter your details here</Text>
         <View style={allStyles.signupCodeAndPhoneContainer}>
           <TextInput
             placeholder="Enter your phone number"
