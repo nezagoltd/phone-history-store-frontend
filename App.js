@@ -1,16 +1,25 @@
-import { createSwitchNavigator, createAppContainer } from 'react-navigation';
+import 'react-native-gesture-handler';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import SignupScreen from './src/screens/signup/SignupScreen';
 
-const navigator = createSwitchNavigator(
-  {
-    SignupScreen,
-  },
-  {
-    initialRouteName: 'SignupScreen',
-    defaultNavigationOptions: {
-      title: 'Phone History Store',
-    },
-  },
-);
+/**
+ * @return {*} renders the UI
+ */
+const App = () => {
+  const Stack = createStackNavigator();
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="SignupScreen"
+          component={SignupScreen}
+          options={{ title: 'Signup' }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
 
-export default createAppContainer(navigator);
+export default App;
