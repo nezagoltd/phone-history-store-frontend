@@ -1,30 +1,44 @@
-version: "2"         # required to adjust maintainability checks
+version: "2"
 checks:
   argument-count:
+    enabled: true
+    config:
+      threshold: 4
+  complex-logic:
+    enabled: true
+    config:
+      threshold: 4
+  file-lines:
+    enabled: true
+    config:
+      threshold: 250
+  method-complexity:
+    enabled: true
     config:
       threshold: 5
-  complex-logic:
-    config:
-      threshold: 10
-  file-lines:
-    config:
-      threshold: 500
-  method-complexity:
-    config:
-      threshold: 10
   method-count:
+    enabled: true
     config:
       threshold: 20
   method-lines:
-    config:
-      threshold: 50
-  nested-control-flow:
+    enabled: true
     config:
       threshold: 25
-  return-statements:
+  nested-control-flow:
+    enabled: true
     config:
-      threshold: 10
+      threshold: 4
+  return-statements:
+    enabled: true
+    config:
+      threshold: 4
   similar-code:
     enabled: true
   identical-code:
     enabled: true
+exclude_patterns:
+- "assets/"
+- "android/"
+- "ios/"
+- "node_modules/"
+- "**/node_modules/"
