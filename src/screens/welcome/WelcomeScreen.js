@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import welcome from '../../helpers/welcome.helper';
 import styles from '../../styles/allStyles';
+import checkNetworkConnectivity from '../../helpers/checkInternetConnection.helper';
 
 const phoneHistoryStoryStoreLogo = require('../../../assets/img/phone-history-store-icon.png');
 const myLoadingIcon = require('../../../assets/img/loading-icon.gif');
@@ -19,16 +20,19 @@ class WelcomeScreen extends Component {
     this.state = {};
   }
 
-
   componentDidMount = async () => {
-    await welcome(this);
+    checkNetworkConnectivity(this);
   }
 
   /**
    * @method
-   *  @returns {*} WelcomeUI
+   * @returns {*} WelcomeUI
    * */
   render() {
+    const { isInternetReachable } = this.state;
+    if (isInternetReachable) {
+      welcome(this);
+    }
     const { welcomeText } = this.state;
     const loadingIcon = (<Image style={allStyles.loadingIcon} source={myLoadingIcon} />);
     return (
