@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+import welcome from '../../helpers/welcome.helper';
+import styles from '../../styles/allStyles';
+
+const phoneHistoryStoryStoreLogo = require('../../../assets/img/phone-history-store-icon.png');
+const myLoadingIcon = require('../../../assets/img/loading-icon.gif');
+
+const { allStyles } = styles;
 
 /**
  * @class
@@ -12,14 +19,28 @@ class WelcomeScreen extends Component {
     this.state = {};
   }
 
+
+  componentDidMount = async () => {
+    await welcome(this);
+  }
+
   /**
    * @method
    *  @returns {*} WelcomeUI
    * */
   render() {
+    const { welcomeText } = this.state;
+    const loadingIcon = (<Image style={allStyles.loadingIcon} source={myLoadingIcon} />);
     return (
-      <View>
-        <Text>Welcome</Text>
+      <View style={allStyles.welcomeScreen}>
+        <Image source={phoneHistoryStoryStoreLogo} />
+
+        {welcomeText ? <Text style={allStyles.welcomeScreenText}>{welcomeText}</Text>
+          : <View style={{ marginBottom: '10%' }}><Text>{loadingIcon}</Text></View>}
+
+        <TouchableOpacity style={allStyles.getStartedBtn}>
+          <Text style={allStyles.welcomeScreenText}>Get Started</Text>
+        </TouchableOpacity>
       </View>
     );
   }
