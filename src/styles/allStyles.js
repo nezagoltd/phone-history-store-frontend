@@ -1,8 +1,31 @@
 import { StyleSheet } from 'react-native';
 
 const allStyles = StyleSheet.create({
-  signupPageIconContainer: {
-    height: '0.5%',
+  loadingIcon: {
+    height: 50,
+    width: 50,
+    marginBottom: 100,
+  },
+  welcomeScreen: {
+    backgroundColor: 'rgb(90,100,100)',
+    display: 'flex',
+    flex: 1,
+    padding: '3%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  welcomeScreenText: {
+    color: 'rgb(255,255,255)',
+    fontSize: 20,
+    textAlign: 'center',
+    fontFamily: 'Cochin',
+  },
+  getStartedBtn: {
+    marginTop: '10%',
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    padding: '5%',
+    borderRadius: 50,
+    width: '80%',
   },
   signupFormContainer: {
     backgroundColor: 'rgba(90,100,100,0.8)',
