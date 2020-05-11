@@ -4,20 +4,25 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import styles from '../../styles/allStyles';
 import getUserData from '../../actions/getUserData';
+import nextFunction from '../../helpers/next.helper';
 
 const { allStyles } = styles;
 
 /**
  * @class
  */
-class SignupScreen extends Component {
+class PhoneNumberScreen extends Component {
+  nextFunction=nextFunction;
+
   /**
 * @constructor
 */
   constructor() {
     super();
     this.state = {
+      phoneNumber: '',
     };
+    this.nextFunction = this.nextFunction.bind(this);
   }
 
   /**
@@ -26,20 +31,23 @@ class SignupScreen extends Component {
 * @description it returns the UI
 */
   render() {
-    const { getUserData: funcGetData } = this.props;
     return (
       <View style={allStyles.signupFormContainer}>
-        <Text style={allStyles.signupTitle}>Enter your details here</Text>
+        <Text style={allStyles.signupTitle}>Enter your phone number</Text>
         <View style={allStyles.signupCodeAndPhoneContainer}>
           <TextInput
+            style={allStyles.signupInput}
             placeholder="Enter your phone number"
-            onChangeText={(text) => funcGetData({ phoneNumber: text })}
+            placeholderTextColor="rgb(255,255,255)"
+            onChangeText={(text) => this.setState({ phoneNumber: text })}
+            keyboardType="phone-pad"
+            autoFocus
           />
         </View>
         <View>
           <TouchableOpacity
             style={allStyles.nextBtn}
-            onPress={() => this.nextFunction()}
+            onPress={() => this.nextFunction(this, 'EnterNamesScreen')}
           >
             <Text style={allStyles.nextText}>Next</Text>
           </TouchableOpacity>
@@ -49,8 +57,8 @@ class SignupScreen extends Component {
   }
 }
 
-SignupScreen.propTypes = {
-  getUserData: PropTypes.func.isRequired,
+PhoneNumberScreen.propTypes = {
+  navigation: PropTypes.object.isRequired,
 };
 
 /**
@@ -62,4 +70,4 @@ const mapStateToProps = (state) => ({
   myData: state.myReducers,
 });
 
-export default connect(mapStateToProps, { getUserData })(SignupScreen);
+export default connect(mapStateToProps, { getUserData })(PhoneNumberScreen);
