@@ -3,6 +3,7 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import SignupScreen from './src/screens/signup/SignupScreen';
+import WelcomeScreen from './src/screens/welcome/WelcomeScreen';
 
 /**
  * @return {*} renders the UI
@@ -12,6 +13,11 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen
+          name="WelcomeScreen"
+          component={WelcomeScreen}
+          options={{ title: 'Welcome' }}
+        />
         <Stack.Screen
           name="SignupScreen"
           component={SignupScreen}

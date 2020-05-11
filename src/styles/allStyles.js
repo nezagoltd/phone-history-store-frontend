@@ -1,9 +1,6 @@
 import { StyleSheet } from 'react-native';
 
 const allStyles = StyleSheet.create({
-  signupPageIconContainer: {
-    height: '0.5%',
-  },
   signupFormContainer: {
     backgroundColor: 'rgba(90,100,100,0.8)',
     width: '100%',
