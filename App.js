@@ -14,9 +14,9 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
+          options={{ headerShown: false }}
           name="WelcomeScreen"
           component={WelcomeScreen}
-          options={{ title: 'Welcome' }}
         />
         <Stack.Screen
           name="SignupScreen"

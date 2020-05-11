@@ -11,6 +11,8 @@ const allStyles = StyleSheet.create({
     display: 'flex',
     flex: 1,
     padding: '3%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   welcomeScreenText: {
     color: 'rgb(255,255,255)',
@@ -22,7 +24,8 @@ const allStyles = StyleSheet.create({
     marginTop: '10%',
     backgroundColor: 'rgba(255,255,255,0.1)',
     padding: '5%',
-    borderRadius: 30,
+    borderRadius: 50,
+    width: '80%',
   },
   signupFormContainer: {
     backgroundColor: 'rgba(90,100,100,0.8)',
