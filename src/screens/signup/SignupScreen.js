@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity, TextInput } from 'react-native';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import styles from '../../styles/allStyles';
-import InputComponent from '../../components/InputComponent';
+import getUserData from '../../actions/getUserData';
 
 const { allStyles } = styles;
 /**
@@ -18,24 +20,20 @@ class SignupScreen extends Component {
   }
 
   /**
-   * @method
-   * @return {*} next state
-   */
-  nextFunction = () => {
-    // console.log(this.state);
-  }
-
-  /**
 * @method
 * @return {*} UI
 * @description it returns the UI
 */
   render() {
+    const { getUserData: funcGetData } = this.props;
     return (
       <View style={allStyles.signupFormContainer}>
         <Text style={allStyles.signupTitle}>Enter your phone number</Text>
         <View style={allStyles.signupCodeAndPhoneContainer}>
-          <InputComponent numberOfInputs={2} />
+          <TextInput
+            placeholder="Enter your phone number"
+            onChangeText={(text) => funcGetData({ phoneNumber: text })}
+          />
         </View>
         <View>
           <TouchableOpacity
@@ -50,4 +48,17 @@ class SignupScreen extends Component {
   }
 }
 
-export default SignupScreen;
+SignupScreen.propTypes = {
+  getUserData: PropTypes.func.isRequired,
+};
+
+/**
+ *
+ * @param {*} state
+ * @returns {*} myData
+ */
+const mapStateToProps = (state) => ({
+  myData: state.myReducers,
+});
+
+export default connect(mapStateToProps, { getUserData })(SignupScreen);
