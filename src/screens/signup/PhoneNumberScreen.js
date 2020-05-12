@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Text, View, TouchableOpacity, TextInput } from 'react-native';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { openDatabase } from 'react-native-sqlite-storage';
 import styles from '../../styles/allStyles';
 import getUserData from '../../actions/getUserData';
 import nextFunction from '../../helpers/next.helper';
@@ -23,6 +24,16 @@ class PhoneNumberScreen extends Component {
       phoneNumber: '',
     };
     this.nextFunction = this.nextFunction.bind(this);
+  }
+
+  componentDidMount = () => {
+    const myDb = openDatabase({ name: 'nezastore_db.db' });
+    myDb.transaction((myQuery) => {
+      myQuery.executeSql('CREATE TABLE users (id INTEGER PRIMARY KEY, phoneNumber STRING)');
+      myQuery.executeSql('SELECT * FROM users', (text, result) => {
+        console.log(result.rows.length);
+      });
+    });
   }
 
   /**

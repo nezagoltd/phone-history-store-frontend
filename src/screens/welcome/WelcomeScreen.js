@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
+import SQLite from 'react-native-sqlite-storage';
 import welcome from '../../helpers/welcome.helper';
 import styles from '../../styles/allStyles';
 import checkNetworkConnectivity from '../../helpers/checkInternetConnection.helper';
@@ -25,6 +26,7 @@ class WelcomeScreen extends Component {
   }
 
   componentDidMount = async () => {
+    await SQLite.openDatabase({ name: 'nezastore_db', location: 'default' }, () => {}, () => {});
     checkNetworkConnectivity(this);
   }
 
