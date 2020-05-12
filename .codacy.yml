@@ -3,4 +3,5 @@ exclude_paths:
   - 'assets/'
   - 'android/*'
   - 'ios/*'
-  - '__tests__/*' 
+  - '__tests__/*'
+  - 'src/reducers/*'
