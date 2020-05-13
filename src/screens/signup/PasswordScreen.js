@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import styles from '../../styles/allStyles';
 import getUserData from '../../actions/getUserData';
-import nextFunction from '../../helpers/next.helper';
+import registerFunction from '../../helpers/registerFunction.helper';
 
 const { allStyles } = styles;
 
@@ -12,7 +12,7 @@ const { allStyles } = styles;
  * @class
  */
 class EnterPasswordScreen extends Component {
-  nextFunction=nextFunction;
+  registerFunction=registerFunction;
 
   /**
 * @constructor
@@ -20,10 +20,10 @@ class EnterPasswordScreen extends Component {
   constructor() {
     super();
     this.state = {
-      email: '',
-      age: '',
+      password: '',
+      confirmPassword: '',
     };
-    this.nextFunction = this.nextFunction.bind(this);
+    this.registerFunction = this.registerFunction.bind(this);
   }
 
   /**
@@ -40,7 +40,7 @@ class EnterPasswordScreen extends Component {
             style={allStyles.signupInput}
             placeholder="Enter your password"
             placeholderTextColor="rgb(255,255,255)"
-            onTextChange={(text) => this.setState({ email: text })}
+            onChangeText={(text) => this.setState({ password: text })}
             keyboardType="default"
             autoFocus
           />
@@ -48,14 +48,14 @@ class EnterPasswordScreen extends Component {
             style={allStyles.signupInput}
             placeholder="confirm your password"
             placeholderTextColor="rgb(255,255,255)"
-            onTextChange={(text) => this.setState({ age: text })}
+            onChangeText={(text) => this.setState({ confirmPassword: text })}
             keyboardType="default"
           />
         </View>
         <View>
           <TouchableOpacity
             style={allStyles.nextBtn}
-            // onPress={() => console.log(this.props.myData)}
+            onPress={() => { this.registerFunction(this); }}
           >
             <Text style={allStyles.nextText}>Register</Text>
           </TouchableOpacity>

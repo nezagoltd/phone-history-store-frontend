@@ -40,7 +40,7 @@ class EnterNamesScreen extends Component {
             style={allStyles.signupInput}
             placeholder="Enter your first name"
             placeholderTextColor="rgb(255,255,255)"
-            onTextChange={(text) => this.setState({ firstName: text })}
+            onChangeText={(text) => this.setState({ firstName: text })}
             keyboardType="default"
             autoFocus
           />
@@ -48,7 +48,7 @@ class EnterNamesScreen extends Component {
             style={allStyles.signupInput}
             placeholder="Enter your last name"
             placeholderTextColor="rgb(255,255,255)"
-            onTextChange={(text) => this.setState({ lastName: text })}
+            onChangeText={(text) => this.setState({ lastName: text })}
             keyboardType="default"
           />
         </View>

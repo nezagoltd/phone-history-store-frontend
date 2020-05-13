@@ -4,11 +4,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Provider } from 'react-redux';
 import PhoneNumberScreen from './src/screens/signup/PhoneNumberScreen';
-import WelcomeScreen from './src/screens/welcome/WelcomeScreen';
+import obj from './src/screens/welcome/WelcomeScreen';
 import store from './src/store';
 import EnterNamesScreen from './src/screens/signup/NamesScreen';
 import EnterEmailAndAgeScreen from './src/screens/signup/EmailAndAgeScreen';
 import EnterPasswordScreen from './src/screens/signup/PasswordScreen';
+
+const { WelcomeScreen } = obj;
 
 /**
  * @return {*} renders the UI

@@ -40,7 +40,7 @@ class EnterEmailAndAgeScreen extends Component {
             style={allStyles.signupInput}
             placeholder="Enter your email"
             placeholderTextColor="rgb(255,255,255)"
-            onTextChange={(text) => this.setState({ email: text })}
+            onChangeText={(text) => this.setState({ email: text })}
             keyboardType="default"
             autoFocus
           />
@@ -48,7 +48,7 @@ class EnterEmailAndAgeScreen extends Component {
             style={allStyles.signupInput}
             placeholder="Enter age in numbers (eg: 22)"
             placeholderTextColor="rgb(255,255,255)"
-            onTextChange={(text) => this.setState({ age: text })}
+            onChangeText={(text) => this.setState({ age: text })}
             keyboardType="default"
           />
         </View>
