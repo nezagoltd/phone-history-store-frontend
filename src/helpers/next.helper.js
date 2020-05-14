@@ -1,4 +1,4 @@
-import obj from '../screens/welcome/WelcomeScreen';
+import obj from '../database/connectToDb';
 import checkUserFromDb from './checkIfUserExistsFromDb.helper';
 import checkNetworkConnectivity from './checkInternetConnection.helper';
 

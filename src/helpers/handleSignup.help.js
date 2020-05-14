@@ -1,5 +1,5 @@
 import axios from 'axios';
-import obj from '../screens/welcome/WelcomeScreen';
+import obj from '../database/connectToDb';
 
 const { myDb } = obj;
 
