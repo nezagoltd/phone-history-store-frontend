@@ -11,6 +11,7 @@ import EnterPasswordScreen from './src/screens/signup/PasswordScreen';
 import LoginScreen from './src/screens/login/loginScreen';
 import WelcomeScreen from './src/screens/welcome/WelcomeScreen';
 import obj from './src/database/connectToDb';
+import DashboardScreen from './src/screens/dashbords/dashbordScreen';
 
 /**
  * @return {*} renders the UI
@@ -51,6 +52,11 @@ const App = () => {
             name="EnterPasswordScreen"
             component={EnterPasswordScreen}
             options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="DashboardScreen"
+            component={DashboardScreen}
+            options={{ title: 'Dashboard' }}
           />
         </Stack.Navigator>
       </NavigationContainer>

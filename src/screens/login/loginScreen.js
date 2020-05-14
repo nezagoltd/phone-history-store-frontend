@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from '../../styles/allStyles';
+import handleLogin from '../../handlers/handleLogin';
 
 
 const { allStyles } = styles;
@@ -9,12 +10,15 @@ const { allStyles } = styles;
  * @class
  */
 class LoginScreen extends Component {
+  handleLogin=handleLogin;
+
   /**
      * @constructor
      */
   constructor() {
     super();
     this.state = {};
+    this.handleLogin = this.handleLogin.bind(this);
   }
 
   /**
@@ -33,14 +37,18 @@ class LoginScreen extends Component {
               style={allStyles.signupInput}
               placeholder="Enter your phone number"
               placeholderTextColor="rgb(255,255,255)"
+              onChangeText={(text) => this.setState({ phoneNumber: text })}
+              keyboardType="phone-pad"
             />
             <TextInput
               style={allStyles.signupInput}
               placeholder="Enter your password here"
               placeholderTextColor="rgb(255,255,255)"
+              onChangeText={(text) => this.setState({ password: text })}
             />
             <TouchableOpacity
               style={allStyles.nextBtn}
+              onPress={() => this.handleLogin(this)}
             >
               <Text style={allStyles.nextText}>Login</Text>
             </TouchableOpacity>
