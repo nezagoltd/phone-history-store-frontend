@@ -14,9 +14,10 @@ const handleSignup = async (data) => {
   try {
     const tmp = await axios.post(SIGNUP_URL, data);
     res = tmp.data;
+    const { token } = tmp.data;
     await myDb.transaction((txn) => {
-      txn.executeSql('UPDATE users SET password=?, isRegistered=? WHERE phoneNumber=?',
-        [data.password, true, data.phoneNumber]);
+      txn.executeSql('UPDATE users SET password=?, isRegistered=?, token=? WHERE phoneNumber=?',
+        [data.password, true, data.phoneNumber, token]);
     });
   } catch (err) {
     res = err.response.data;
