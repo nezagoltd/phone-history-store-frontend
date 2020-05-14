@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
+import PropTypes from 'prop-types';
+import { openDatabase } from 'react-native-sqlite-storage';
 import welcome from '../../helpers/welcome.helper';
 import styles from '../../styles/allStyles';
 import checkNetworkConnectivity from '../../helpers/checkInternetConnection.helper';
@@ -8,19 +10,34 @@ const phoneHistoryStoryStoreLogo = require('../../../assets/img/phone-history-st
 const myLoadingIcon = require('../../../assets/img/loading-icon.gif');
 
 const { allStyles } = styles;
+const myDb = openDatabase({ name: 'nezadigitalstore.db', createFromLocation: 1 });
 
 /**
  * @class
  * @classdesc It contains the Welcome screen UI
  */
 class WelcomeScreen extends Component {
-  /** @constructor */
+  /**
+   * @param {*} props
+   * @constructor
+   * */
   constructor() {
     super();
     this.state = {};
+    myDb.transaction((txn) => {
+      txn.executeSql(
+        "SELECT name FROM sqlite_master WHERE type='table' AND name='users'", [],
+        (tx, res) => {
+          if (res.rows.length === 0) {
+            txn.executeSql('DROP TABLE IF EXISTS users', []);
+            txn.executeSql('CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY, phoneNumber VARCHAR(20), firstName VARCHAR(255), lastName VARCHAR(255), email VARCHAR(255), "password" VARCHAR(255), age INTEGER, isRegistered BOOLEAN DEFAULT false);', []);
+          }
+        },
+      );
+    });
   }
 
-  componentDidMount = async () => {
+  componentDidMount = () => {
     checkNetworkConnectivity(this);
   }
 
@@ -35,19 +52,29 @@ class WelcomeScreen extends Component {
     }
     const { welcomeText } = this.state;
     const loadingIcon = (<Image style={allStyles.loadingIcon} source={myLoadingIcon} />);
+    const { navigation } = this.props;
     return (
       <View style={allStyles.welcomeScreen}>
+
         <Image source={phoneHistoryStoryStoreLogo} />
 
         {welcomeText ? <Text style={allStyles.welcomeScreenText}>{welcomeText}</Text>
           : <View style={{ marginBottom: '10%' }}><Text>{loadingIcon}</Text></View>}
 
-        <TouchableOpacity style={allStyles.getStartedBtn}>
+        <TouchableOpacity
+          style={allStyles.getStartedBtn}
+          onPress={() => { navigation.navigate('PhoneNumberScreen'); }}
+        >
           <Text style={allStyles.welcomeScreenText}>Get Started</Text>
         </TouchableOpacity>
+
       </View>
     );
   }
 }
 
-export default WelcomeScreen;
+WelcomeScreen.propTypes = {
+  navigation: PropTypes.object.isRequired,
+};
+
+export default { WelcomeScreen, myDb };

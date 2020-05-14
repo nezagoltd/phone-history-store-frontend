@@ -3,9 +3,14 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Provider } from 'react-redux';
-import SignupScreen from './src/screens/signup/SignupScreen';
-import WelcomeScreen from './src/screens/welcome/WelcomeScreen';
+import PhoneNumberScreen from './src/screens/signup/PhoneNumberScreen';
+import obj from './src/screens/welcome/WelcomeScreen';
 import store from './src/store';
+import EnterNamesScreen from './src/screens/signup/NamesScreen';
+import EnterEmailAndAgeScreen from './src/screens/signup/EmailAndAgeScreen';
+import EnterPasswordScreen from './src/screens/signup/PasswordScreen';
+
+const { WelcomeScreen } = obj;
 
 /**
  * @return {*} renders the UI
@@ -22,9 +27,24 @@ const App = () => {
             component={WelcomeScreen}
           />
           <Stack.Screen
-            name="SignupScreen"
-            component={SignupScreen}
-            options={{ title: 'Signup' }}
+            name="PhoneNumberScreen"
+            component={PhoneNumberScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="EnterNamesScreen"
+            component={EnterNamesScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="EnterEmailAndAgeScreen"
+            component={EnterEmailAndAgeScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="EnterPasswordScreen"
+            component={EnterPasswordScreen}
+            options={{ headerShown: false }}
           />
         </Stack.Navigator>
       </NavigationContainer>
