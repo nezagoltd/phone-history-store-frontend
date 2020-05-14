@@ -12,7 +12,6 @@ import LoginScreen from './src/screens/login/loginScreen';
 import WelcomeScreen from './src/screens/welcome/WelcomeScreen';
 import obj from './src/database/connectToDb';
 
-
 /**
  * @return {*} renders the UI
  */
@@ -23,6 +22,11 @@ const App = () => {
     <Provider store={store}>
       <NavigationContainer>
         <Stack.Navigator>
+          <Stack.Screen
+            name="LoginScreen"
+            component={LoginScreen}
+            options={{ headerShown: false }}
+          />
           <Stack.Screen
             options={{ headerShown: false }}
             name="WelcomeScreen"
@@ -46,11 +50,6 @@ const App = () => {
           <Stack.Screen
             name="EnterPasswordScreen"
             component={EnterPasswordScreen}
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name="LoginScreen"
-            component={LoginScreen}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>
