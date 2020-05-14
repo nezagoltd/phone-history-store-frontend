@@ -4,19 +4,21 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Provider } from 'react-redux';
 import PhoneNumberScreen from './src/screens/signup/PhoneNumberScreen';
-import obj from './src/screens/welcome/WelcomeScreen';
 import store from './src/store';
 import EnterNamesScreen from './src/screens/signup/NamesScreen';
 import EnterEmailAndAgeScreen from './src/screens/signup/EmailAndAgeScreen';
 import EnterPasswordScreen from './src/screens/signup/PasswordScreen';
+import LoginScreen from './src/screens/login/loginScreen';
+import WelcomeScreen from './src/screens/welcome/WelcomeScreen';
+import obj from './src/database/connectToDb';
 
-const { WelcomeScreen } = obj;
 
 /**
  * @return {*} renders the UI
  */
 const App = () => {
   const Stack = createStackNavigator();
+  obj.prepareDb();
   return (
     <Provider store={store}>
       <NavigationContainer>
@@ -44,6 +46,11 @@ const App = () => {
           <Stack.Screen
             name="EnterPasswordScreen"
             component={EnterPasswordScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="LoginScreen"
+            component={LoginScreen}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>
