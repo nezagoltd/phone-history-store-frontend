@@ -1,5 +1,6 @@
 import obj from '../screens/welcome/WelcomeScreen';
 import checkUserFromDb from './checkIfUserExistsFromDb.helper';
+import checkNetworkConnectivity from './checkInternetConnection.helper';
 
 const { myDb } = obj;
 
@@ -12,22 +13,37 @@ const nextFunction = async (component, nextComponent) => {
   const { phoneNumber, firstName, lastName, email, age } = component.state;
   const { navigation, getUserData, myData } = component.props;
   const { userData } = myData;
+  const phoneNumberToDeal = `"${phoneNumber}"`;
+  const myNetworkInfo = checkNetworkConnectivity(component);
   if (phoneNumber) {
-    const myUser = await checkUserFromDb(phoneNumber);
-    if (myUser.error) {
-      (await myDb).transaction((txn) => {
-        txn.executeSql('INSERT INTO users (phoneNumber) VALUES (?)', [phoneNumber],
-          (txt, result) => {
-            if (result.rowsAffected > 0) {
-              getUserData({ phoneNumber });
-              navigation.navigate(nextComponent);
+    if (myNetworkInfo[2]) {
+      const myUser = await checkUserFromDb(phoneNumberToDeal);
+      if (myUser.error) {
+        (await myDb).transaction((txn) => {
+          txn.executeSql('INSERT INTO users (phoneNumber) VALUES (?)', [phoneNumberToDeal],
+            (txt, result) => {
+              if (result.rowsAffected > 0) {
+                getUserData({ phoneNumber: phoneNumberToDeal });
+                navigation.navigate(nextComponent);
+              } else {
+                alert('We did not catch well your phone number, try again');
+              }
+            });
+        });
+      } else {
+        await myDb.transaction((txn) => {
+          txn.executeSql('SELECT * FROM users WHERE phoneNumber = ?', [phoneNumberToDeal], (txt, result) => {
+            if (result.rows.length > 0) {
+              alert('Go to Login');
             } else {
-              alert('We did not catch well your phone number, try again');
+              alert('This account exists, not on this phone but on the other phone, so login instead');
             }
           });
-      });
+        });
+      // alert(myUser.message);
+      }
     } else {
-      alert(myUser.message);
+      alert('You are not connected to internet');
     }
   } else if (firstName || lastName) {
     const phoneNumberToReferenceForUpdate = userData.phoneNumber;

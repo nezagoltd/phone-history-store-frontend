@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Text, View, TouchableOpacity, TextInput } from 'react-native';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-// import { openDatabase } from 'react-native-sqlite-storage';
 import styles from '../../styles/allStyles';
 import getUserData from '../../actions/getUserData';
 import nextFunction from '../../helpers/next.helper';
