@@ -11,7 +11,7 @@ import EnterPasswordScreen from './src/screens/signup/PasswordScreen';
 import LoginScreen from './src/screens/login/loginScreen';
 import WelcomeScreen from './src/screens/welcome/WelcomeScreen';
 import obj from './src/database/connectToDb';
-import DashboardScreen from './src/screens/dashbords/dashbordScreen';
+import UserProfileScreen from './src/screens/profile/userProfileScreen';
 import DeviceInfoScreen from './src/screens/signup/DeviceInfoScreen';
 
 /**
@@ -55,9 +55,9 @@ const App = () => {
             options={{ headerShown: false }}
           />
           <Stack.Screen
-            name="DashboardScreen"
-            component={DashboardScreen}
-            options={{ title: 'Dashboard' }}
+            name="UserProfileScreen"
+            component={UserProfileScreen}
+            options={{ headerShown: false }}
           />
           <Stack.Screen
             name="DeviceInfoScreen"

@@ -38,7 +38,7 @@ const registerFunction = (component) => {
                 if (user.token) {
                   // signup success
                   getUserData({ token: user.token });
-                  navigation.navigate('DashboardScreen');
+                  navigation.navigate('UserProfileScreen');
                 } else {
                   // signup failed
                   alert(user.error);

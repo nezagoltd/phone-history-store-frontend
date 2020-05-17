@@ -28,7 +28,7 @@ const handleLogin = async (component) => {
           txn.executeSql('UPDATE users set token = ? WHERE phoneNumber = ?',
             [token, phoneNumberToSend]);
         });
-        navigation.navigate('DashboardScreen');
+        navigation.navigate('UserProfileScreen');
       } else {
         // login failed
         alert(resFromDb.error);
