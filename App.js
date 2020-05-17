@@ -12,6 +12,7 @@ import LoginScreen from './src/screens/login/loginScreen';
 import WelcomeScreen from './src/screens/welcome/WelcomeScreen';
 import obj from './src/database/connectToDb';
 import DashboardScreen from './src/screens/dashbords/dashbordScreen';
+import DeviceInfoScreen from './src/screens/signup/DeviceInfoScreen';
 
 /**
  * @return {*} renders the UI
@@ -57,6 +58,11 @@ const App = () => {
             name="DashboardScreen"
             component={DashboardScreen}
             options={{ title: 'Dashboard' }}
+          />
+          <Stack.Screen
+            name="DeviceInfoScreen"
+            component={DeviceInfoScreen}
+            options={{ headerShown: false }}
           />
         </Stack.Navigator>
       </NavigationContainer>

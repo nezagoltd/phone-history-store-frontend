@@ -10,7 +10,14 @@ const { myDb } = obj;
  *@returns {*} state
  */
 const nextFunction = async (component, nextComponent) => {
-  const { phoneNumber, firstName, lastName, email, age } = component.state;
+  const {
+    phoneNumber,
+    firstName,
+    lastName,
+    email, age,
+    deviceUniqueId,
+    deviceName,
+  } = component.state;
   const { navigation, getUserData, myData } = component.props;
   const { userData } = myData;
   const phoneNumberToDeal = `"${phoneNumber}"`;
@@ -85,6 +92,12 @@ const nextFunction = async (component, nextComponent) => {
       }
     } else {
       alert('Please enter both your email and your age');
+    }
+  } else if (deviceUniqueId || deviceName) {
+    if (deviceName) {
+      alert(deviceName);
+    } else {
+      alert('Please choose the name you can give to this device, so that it will be easy for you for the other logins');
     }
   }
 };
