@@ -49,7 +49,7 @@ class DeviceInfoScreen extends Component {
         <View>
           <TouchableOpacity
             style={allStyles.nextBtn}
-            onPress={() => this.nextFunction(this, 'DeviceInfoScreen')}
+            onPress={() => this.nextFunction(this, 'EnterPasswordScreen')}
           >
             <Text style={allStyles.nextText}>Next</Text>
           </TouchableOpacity>

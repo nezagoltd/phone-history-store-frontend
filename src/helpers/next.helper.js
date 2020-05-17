@@ -95,7 +95,17 @@ const nextFunction = async (component, nextComponent) => {
     }
   } else if (deviceUniqueId || deviceName) {
     if (deviceName) {
-      alert(deviceName);
+      (await myDb).transaction((txn) => {
+        txn.executeSql('UPDATE users SET deviceUniqueId = ?, deviceName = ?',
+          [deviceUniqueId, deviceName],
+          (txt, result) => {
+            if (result.rowsAffected > 0) {
+              navigation.navigate(nextComponent);
+            } else {
+              alert('We are having issue to catch your device ID, please try again');
+            }
+          });
+      });
     } else {
       alert('Please choose the name you can give to this device, so that it will be easy for you for the other logins');
     }
