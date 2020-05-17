@@ -13,7 +13,7 @@ const prepareDb = () => {
       (tx, res) => {
         if (res.rows.length === 0) {
           txn.executeSql('DROP TABLE IF EXISTS users', []);
-          txn.executeSql('CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY, phoneNumber VARCHAR(20), firstName VARCHAR(255), lastName VARCHAR(255), email VARCHAR(255), "password" VARCHAR(255), age INTEGER, isRegistered BOOLEAN DEFAULT false, token VARCHAR(255));', []);
+          txn.executeSql('CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY, phoneNumber VARCHAR(20), firstName VARCHAR(255), lastName VARCHAR(255), email VARCHAR(255), "password" VARCHAR(255), age INTEGER, isRegistered BOOLEAN DEFAULT false, deviceUniqueId VARCHAR(255), deviceName VARCHAR(255),token VARCHAR(255));', []);
         }
       },
     );
