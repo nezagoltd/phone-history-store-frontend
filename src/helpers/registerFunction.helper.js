@@ -10,7 +10,7 @@ const { myDb } = obj;
  */
 const registerFunction = (component) => {
   const { password, confirmPassword } = component.state;
-  const { myData, getUserData } = component.props;
+  const { myData, getUserData, navigation } = component.props;
   const { userData } = myData;
   const tmp = [];
   if (password && confirmPassword) {
@@ -30,13 +30,15 @@ const registerFunction = (component) => {
                   lastName: currReg.lastName,
                   email: currReg.email,
                   age: currReg.age,
+                  deviceUniqueId: currReg.deviceUniqueId,
+                  deviceName: currReg.deviceName,
                   password,
                 };
                 const user = await handleSignup(data);
                 if (user.token) {
                   // signup success
-                  alert(user.token);
                   getUserData({ token: user.token });
+                  navigation.navigate('DashboardScreen');
                 } else {
                   // signup failed
                   alert(user.error);
