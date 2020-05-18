@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import jwtDecode from 'jwt-decode';
 import getUserData from '../../actions/getUserData';
 
 /**
@@ -15,6 +16,12 @@ class UserProfileScreen extends Component {
   constructor() {
     super();
     this.state = {};
+  }
+
+  componentDidMount=() => {
+    const { myData } = this.props;
+    const { token } = myData.userData;
+    this.setState({ sessionUser: jwtDecode(token) });
   }
 
   /**
