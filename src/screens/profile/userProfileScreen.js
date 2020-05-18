@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import jwtDecode from 'jwt-decode';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import getUserData from '../../actions/getUserData';
+import ProfileTab from './Tabs/profileTab';
+import StoreTab from './Tabs/storeTab';
+
+const Tab = createBottomTabNavigator();
 
 /**
  * @class
@@ -30,12 +34,16 @@ class UserProfileScreen extends Component {
      */
   render() {
     return (
-      <View>
-        <Text>Hello user, welcome to your profile</Text>
-        <TouchableOpacity>
-          <Text>Touch me</Text>
-        </TouchableOpacity>
-      </View>
+      <Tab.Navigator>
+        <Tab.Screen
+          name="Profile"
+          component={ProfileTab}
+        />
+        <Tab.Screen
+          name="Store"
+          component={StoreTab}
+        />
+      </Tab.Navigator>
     );
   }
 }
