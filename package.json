@@ -8,7 +8,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "(adb reverse tcp:7007 tcp:7007 || true) && start-storybook",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
@@ -43,6 +43,7 @@
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addons": "^5.3.18",
     "@storybook/react-native": "^5.3.18",
+    "@storybook/react-native-server": "^5.3.18",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.1.0",
     "eslint": "^6.8.0",
