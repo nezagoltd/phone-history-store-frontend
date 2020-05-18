@@ -8,7 +8,7 @@ import checkNetworkConnectivity from '../helpers/checkInternetConnection.helper'
  */
 const handleLogin = async (component) => {
   const LOGIN_URL = 'http://phone-history-store-backend.herokuapp.com/api/users/login';
-  const { navigation } = component.props;
+  const { navigation, getUserData } = component.props;
   const { phoneNumber, password } = component.state;
   const { myDb } = obj;
   const phoneNumberToSend = `"${phoneNumber}"`;
@@ -28,6 +28,7 @@ const handleLogin = async (component) => {
           txn.executeSql('UPDATE users set token = ? WHERE phoneNumber = ?',
             [token, phoneNumberToSend]);
         });
+        getUserData({ token });
         navigation.navigate('UserProfileScreen');
       } else {
         // login failed
