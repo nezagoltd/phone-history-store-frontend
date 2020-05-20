@@ -3,39 +3,39 @@ checks:
   argument-count:
     enabled: true
     config:
-      threshold: 4
+      threshold: 5
   complex-logic:
     enabled: true
     config:
-      threshold: 4
+      threshold: 50
   file-lines:
     enabled: true
     config:
-      threshold: 250
+      threshold: 500
   method-complexity:
     enabled: true
     config:
-      threshold: 5
+      threshold: 20
   method-count:
     enabled: true
     config:
-      threshold: 20
+      threshold: 50
   method-lines:
     enabled: true
     config:
-      threshold: 25
+      threshold: 50
   nested-control-flow:
     enabled: true
     config:
-      threshold: 4
+      threshold: 10
   return-statements:
     enabled: true
     config:
-      threshold: 4
+      threshold: 10
   similar-code:
-    enabled: true
+    enabled: false
   identical-code:
-    enabled: true
+    enabled: false
 exclude_patterns:
 - "assets/"
 - "android/"
