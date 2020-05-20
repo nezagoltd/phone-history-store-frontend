@@ -84,12 +84,23 @@ const allStyles = StyleSheet.create({
   },
   profilePicContainerStyles: {
     height: 300,
-    marginBottom: 10,
+    width: 300,
+    marginBottom: '10%',
     marginTop: 10,
+    backgroundColor: 'rgb(100,100,100)',
+    padding: '1%',
   },
   profilePicStayles: {
     borderRadius: 2000,
     height: '100%',
+  },
+  profileNames: {
+    backgroundColor: 'rgb(100,100,100)',
+    padding: 10,
+    textAlign: 'center',
+    fontSize: 20,
+    color: 'rgb(255,255,255)',
+    fontWeight: 'bold',
   },
 });
 export default { allStyles };

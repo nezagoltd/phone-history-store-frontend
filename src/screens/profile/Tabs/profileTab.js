@@ -79,7 +79,7 @@ class ProfileTab extends Component {
         <ScrollView>
           <View style={allStyles.profilePicContainerStyles}>
             <Image style={allStyles.profilePicStayles} source={myProfPic} />
-            <Text>{myProfile ? `${myProfile.data.firstName} ${myProfile.data.lastName}` : ''}</Text>
+            <Text style={allStyles.profileNames}>{myProfile ? `${myProfile.data.firstName} ${myProfile.data.lastName}` : ''}</Text>
           </View>
           <View>
             {displayMyProfile}
