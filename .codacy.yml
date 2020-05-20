@@ -5,3 +5,4 @@ exclude_paths:
   - 'ios/*'
   - '__tests__/*'
   - 'src/reducers/*'
+  - 'storybook/'
