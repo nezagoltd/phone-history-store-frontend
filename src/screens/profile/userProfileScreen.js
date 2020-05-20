@@ -24,8 +24,7 @@ class UserProfileScreen extends Component {
   }
 
   componentDidMount=() => {
-    const { myData } = this.props;
-    const { token } = myData.userData;
+    const { token } = this.props.myData.userData;
     this.setState({ sessionUser: jwtDecode(token) });
   }
 
