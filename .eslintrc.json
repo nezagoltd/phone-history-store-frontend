@@ -30,6 +30,7 @@
         "react/no-unused-prop-types":0,
         "no-alert":0,
         "no-restricted-globals":0,
+        "camelcase":0,
         "valid-jsdoc": [
       "error",
       {
