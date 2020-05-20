@@ -74,5 +74,22 @@ const allStyles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
   },
+  profileContainterStyles: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgb(90,100,100)',
+  },
+  profilePicContainerStyles: {
+    height: 300,
+    marginBottom: 10,
+    marginTop: 10,
+  },
+  profilePicStayles: {
+    borderRadius: 2000,
+    height: '100%',
+  },
 });
 export default { allStyles };

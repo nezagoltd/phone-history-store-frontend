@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Image, ScrollView } from 'react-native';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import getMyProfile from '../../../actions/getMyProfile';
 import checkNetworkConnectivity from '../../../helpers/checkInternetConnection.helper';
+import styles from '../../../styles/allStyles';
 
 /**
  * @class
@@ -41,6 +42,8 @@ class ProfileTab extends Component {
   render() {
     const { myData } = this.props;
     const { myProfile } = myData;
+    const myProfPic = require('../../../../assets/img/phone-history-store-icon.png');
+    const { allStyles } = styles;
     let displayMyProfile;
     if (myProfile) {
       const myDevices = myProfile.data.devices.map((device) => (
@@ -50,12 +53,6 @@ class ProfileTab extends Component {
       ));
       displayMyProfile = (
         <View>
-          <Text>
-            Names :
-            {myProfile.data.firstName}
-            {' '}
-            {myProfile.data.lastName}
-          </Text>
           <Text>
             Age :
             {' '}
@@ -71,13 +68,24 @@ class ProfileTab extends Component {
             {' '}
             {myProfile.data.phoneNumber}
           </Text>
+          <Text>My devices : </Text>
           {myDevices}
         </View>
       );
     }
 
     return (
-      <View>{displayMyProfile}</View>
+      <View style={allStyles.profileContainterStyles}>
+        <ScrollView>
+          <View style={allStyles.profilePicContainerStyles}>
+            <Image style={allStyles.profilePicStayles} source={myProfPic} />
+            <Text>{myProfile ? `${myProfile.data.firstName} ${myProfile.data.lastName}` : ''}</Text>
+          </View>
+          <View>
+            {displayMyProfile}
+          </View>
+        </ScrollView>
+      </View>
     );
   }
 }
