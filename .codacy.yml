@@ -1,8 +1,8 @@
 ---
 exclude_paths:
-  - 'assets/'
+  - 'assets/*'
   - 'android/*'
   - 'ios/*'
   - '__tests__/*'
   - 'src/reducers/*'
-  - 'storybook/'
+  - 'storybook/*'
