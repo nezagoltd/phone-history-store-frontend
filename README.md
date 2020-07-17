@@ -9,7 +9,11 @@ There are sometimes we find ourselves in a need of recalling our sweet memories 
 Here Phone History Store helps in that situation, you can store your sms, your call logs, and you phone book as well, for any desired time. It helps you manage and save securely all your phone history, and you can get your phone history wherever you are, even if you lost your device, but you history will remain with you.
 
 ## Project description
-> Description : //You describe the general logic of the project here
+This project *Phone History Store Frontend* is the User Interface of [the backend project](https://github.com/nezago/phone-history-store-backend).
+
+It sync the calls, and SMS to a remote store, and whenever a user needs them, he/she can get them wherever he/she wants them, either on his telephone, or tablet, or computer.
+
+The main logic is that whenever you make, receive, or miss a new call this app will automaticall take the log and saves it on your local store and in a matter of time if you get connected to the internet, it will just send the new record to your remote store. 
 
 ## Screenshot (s)
 > Screenshots: // If your project has some UI, you will link the screenshot of the UI here
