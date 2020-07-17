@@ -15,29 +15,20 @@ It sync the calls, and SMS to a remote store, and whenever a user needs them, he
 
 The main logic is that whenever you make, receive, or miss a new call this app will automaticall take the log and saves it on your local store and in a matter of time if you get connected to the internet, it will just send the new record to your remote store. 
 
-## Screenshot (s)
-> Screenshots: // If your project has some UI, you will link the screenshot of the UI here
-
 ## Built with
-> Built with : // You will specify the technologies you used to build this project such as languages, frameworks, or libararies, ...
-
-## Features
-> Features : // List of features, what a user will be able to do with this project. Eg: a user can signup
-
-## Deployments
-	* Live demo link //The link of deplyoment of your project
-	* Documentation link //Link to documentation of this project
-
-## API Endpoints Specifications
-> If this project is a backend project which exposes some APIs. List all APIs here
-	* Root API
-	* List of all APIs
+1. [React native](https://reactnative.dev/)
+1. [SASS](https://sass-lang.com/)
+1. [Java](https://www.java.com/en/)
 
 ## Tools
-> Tools : //List of all tools you used building this projects. Example: Code editor, CI/CD tools, Testing tools, deplyoment tools, ...
+1. [VSCode](https://code.visualstudio.com/)
+1. [Git](https://git-scm.com/)
+1. [GitHub](https://www.github.com/)
+1. [Codacy](https://www.codacy.com/)
+1. [Codeclimate](https://codeclimate.com/)
 
 ## Running and testing it locally
-> Elaborate how this project could be tested and run on one's local computer
+To have a local copy up and running of this project just follow the following step
 
 ### Prerequisites
 > What should I have already to run this project locally?
