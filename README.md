@@ -16,51 +16,51 @@ It sync the calls, and SMS to a remote store, and whenever a user needs them, he
 The main logic is that whenever you make, receive, or miss a new call this app will automaticall take the log and saves it on your local store and in a matter of time if you get connected to the internet, it will just send the new record to your remote store. 
 
 ## Built with
-1. [React native](https://reactnative.dev/)
-1. [SASS](https://sass-lang.com/)
-1. [Java](https://www.java.com/en/)
+1.  [React native](https://reactnative.dev/)
+1.  [SASS](https://sass-lang.com/)
+1.  [Java](https://www.java.com/en/)
 
 ## Tools
-1. [VSCode](https://code.visualstudio.com/)
-1. [Git](https://git-scm.com/)
-1. [GitHub](https://www.github.com/)
-1. [Codacy](https://www.codacy.com/)
-1. [Codeclimate](https://codeclimate.com/)
+1.  [VSCode](https://code.visualstudio.com/)
+1.  [Git](https://git-scm.com/)
+1.  [GitHub](https://www.github.com/)
+1.  [Codacy](https://www.codacy.com/)
+1.  [Codeclimate](https://codeclimate.com/)
 
 ## Running and testing it locally
 To have a local copy up and running of this project just follow the following steps:
 
 ### Prerequisites
-1. [NodeJS version 10 or higher](https://nodejs.org/en/)
-1. You need to have either Android or iPhone dev environment set on your local machine
+1.  [NodeJS version 10 or higher](https://nodejs.org/en/)
+1.  You need to have either Android or iPhone dev environment set on your local machine
 
 ### Setup
-1. Clone this Repository by running `git clone https://github/nezago/phone-history-store-frontend.git`
-1. Go inside the cloned Repository by running `cd phone-history-store-frontend`
-1. Install all needed dependecies by running `npm install`
+1.  Clone this Repository by running `git clone https://github/nezago/phone-history-store-frontend.git`
+1.  Go inside the cloned Repository by running `cd phone-history-store-frontend`
+1.  Install all needed dependecies by running `npm install`
 
 ### Usage
-1. Run `npm start` => To start local server
-1. Run `npm run android` => To run this app on android device or `npm run ios` to run this app on ios devices
+1.  Run `npm start` => To start local server
+1.  Run `npm run android` => To run this app on android device or `npm run ios` to run this app on ios devices
 
 ### Tests
-~~1. Run `npm test` => To run test suites on your local machine~~
+~~1.    Run `npm test` => To run test suites on your local machine~~
 
 ## Contributions
 This project is an open source project, this means anyone is allowed to contribute to it.
 
 There two ways of contributing to this project:
 
-1. If you see something wrong or not working, please check [the issue tracker section](https://github.com/nezago/phone-history-store-frontend/issues), if that problem you met is not in already opened issues then open the issue by click on issue button
+1.  If you see something wrong or not working, please check [the issue tracker section](https://github.com/nezago/phone-history-store-frontend/issues), if that problem you met is not in already opened issues then open the issue by click on issue button
 
-1. If you have a solution to that, follow the below steps to contribute:
-    1. Fork this repository
-    1. Clone it on your local computer by running `git clone https://github.com/your-username/phone-history-store-frontend.git` __Replace *your username* with the username you use on github__
-    1. Open the cloned repository which appears as a folder on your local computer with your favorite code editor
-    1. Create a separate branch off the *master barnch*,
-    1. Write your codes which fix the issue you found
-    1. Commit and push the branch you created
-    1. Raise a pull request, comparing your new created branch with our original master branch [here](https://github.com/nezago/phone-history-store-frontend)
+1.  If you have a solution to that, follow the below steps to contribute:
+    1.  Fork this repository
+    1.  Clone it on your local computer by running `git clone https://github.com/your-username/phone-history-store-frontend.git` __Replace *your username* with the username you use on github__
+    1.  Open the cloned repository which appears as a folder on your local computer with your favorite code editor
+    1.  Create a separate branch off the *master barnch*,
+    1.  Write your codes which fix the issue you found
+    1.  Commit and push the branch you created
+    1.  Raise a pull request, comparing your new created branch with our original master branch [here](https://github.com/nezago/phone-history-store-frontend)
 
 ## Author (s)
 #### Mugirase Emmanuel (descholar)
