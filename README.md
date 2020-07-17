@@ -63,7 +63,7 @@ There two ways of contributing to this project:
     7.  Raise a pull request, comparing your new created branch with our original master branch [here](https://github.com/nezago/phone-history-store-frontend)
 
 ## Author (s)
-#### Mugirase Emmanuel (descholar)
+### Mugirase Emmanuel (descholar)
 *   Github: [@descholar-ceo](https://github.com/descholar-ceo)
 *   Twitter: [@descholar3](https://twitter.com/descholar3)
 *   LinkedIn: [MUGIRASE Emmanuel](linkedin.com/in/mugirase-emmanuel-a90b49143)
