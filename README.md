@@ -17,31 +17,31 @@ The main logic is that whenever you make, receive, or miss a new call this app w
 
 ## Built with
 1.  [React native](https://reactnative.dev/)
-1.  [SASS](https://sass-lang.com/)
-1.  [Java](https://www.java.com/en/)
+2.  [SASS](https://sass-lang.com/)
+3.  [Java](https://www.java.com/en/)
 
 ## Tools
 1.  [VSCode](https://code.visualstudio.com/)
-1.  [Git](https://git-scm.com/)
-1.  [GitHub](https://www.github.com/)
-1.  [Codacy](https://www.codacy.com/)
-1.  [Codeclimate](https://codeclimate.com/)
+2.  [Git](https://git-scm.com/)
+3.  [GitHub](https://www.github.com/)
+4.  [Codacy](https://www.codacy.com/)
+5.  [Codeclimate](https://codeclimate.com/)
 
 ## Running and testing it locally
 To have a local copy up and running of this project just follow the following steps:
 
 ### Prerequisites
 1.  [NodeJS version 10 or higher](https://nodejs.org/en/)
-1.  You need to have either Android or iPhone dev environment set on your local machine
+2.  You need to have either Android or iPhone dev environment set on your local machine
 
 ### Setup
-1.  Clone this Repository by running `git clone https://github/nezago/phone-history-store-frontend.git`
-1.  Go inside the cloned Repository by running `cd phone-history-store-frontend`
-1.  Install all needed dependecies by running `npm install`
+3.  Clone this Repository by running `git clone https://github/nezago/phone-history-store-frontend.git`
+4.  Go inside the cloned Repository by running `cd phone-history-store-frontend`
+5.  Install all needed dependecies by running `npm install`
 
 ### Usage
-1.  Run `npm start` => To start local server
-1.  Run `npm run android` => To run this app on android device or `npm run ios` to run this app on ios devices
+6.  Run `npm start` => To start local server
+7.  Run `npm run android` => To run this app on android device or `npm run ios` to run this app on ios devices
 
 ### Tests
 ~~1.    Run `npm test` => To run test suites on your local machine~~
@@ -53,17 +53,17 @@ There two ways of contributing to this project:
 
 1.  If you see something wrong or not working, please check [the issue tracker section](https://github.com/nezago/phone-history-store-frontend/issues), if that problem you met is not in already opened issues then open the issue by click on issue button
 
-1.  If you have a solution to that, follow the below steps to contribute:
+2.  If you have a solution to that, follow the below steps to contribute:
     1.  Fork this repository
-    1.  Clone it on your local computer by running `git clone https://github.com/your-username/phone-history-store-frontend.git` __Replace *your username* with the username you use on github__
-    1.  Open the cloned repository which appears as a folder on your local computer with your favorite code editor
-    1.  Create a separate branch off the *master barnch*,
-    1.  Write your codes which fix the issue you found
-    1.  Commit and push the branch you created
-    1.  Raise a pull request, comparing your new created branch with our original master branch [here](https://github.com/nezago/phone-history-store-frontend)
+    2.  Clone it on your local computer by running `git clone https://github.com/your-username/phone-history-store-frontend.git` __Replace *your username* with the username you use on github__
+    3.  Open the cloned repository which appears as a folder on your local computer with your favorite code editor
+    4.  Create a separate branch off the *master barnch*,
+    5.  Write your codes which fix the issue you found
+    6.  Commit and push the branch you created
+    7.  Raise a pull request, comparing your new created branch with our original master branch [here](https://github.com/nezago/phone-history-store-frontend)
 
 ## Author (s)
 #### Mugirase Emmanuel (descholar)
-* Github: [@descholar-ceo](https://github.com/descholar-ceo)
-* Twitter: [@descholar3](https://twitter.com/descholar3)
-* LinkedIn: [MUGIRASE Emmanuel](linkedin.com/in/mugirase-emmanuel-a90b49143)
+*   Github: [@descholar-ceo](https://github.com/descholar-ceo)
+*   Twitter: [@descholar3](https://twitter.com/descholar3)
+*   LinkedIn: [MUGIRASE Emmanuel](linkedin.com/in/mugirase-emmanuel-a90b49143)
