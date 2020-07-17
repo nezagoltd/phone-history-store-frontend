@@ -47,19 +47,23 @@ To have a local copy up and running of this project just follow the following st
 ~~1. Run `npm test` => To run test suites on your local machine~~
 
 ## Contributions
-> How should I contribute? //Specify steps to follow inorder to contribute to this project, if it is allowed.
+This project is an open source project, this means anyone is allowed to contribute to it.
 
-## Acknowledgement (s)
-> If you have used some resources from someone, or instution, or if you got motivations from somewhere, you should show them the acknowlodgement
+There two ways of contributing to this project:
+
+1. If you see something wrong or not working, please check [the issue tracker section](https://github.com/nezago/phone-history-store-frontend/issues), if that problem you met is not in already opened issues then open the issue by click on issue button
+
+1. If you have a solution to that, follow the below steps to contribute:
+    1. Fork this repository
+    1. Clone it on your local computer by running `git clone https://github.com/your-username/phone-history-store-frontend.git` __Replace *your username* with the username you use on github__
+    1. Open the cloned repository which appears as a folder on your local computer with your favorite code editor
+    1. Create a separate branch off the *master barnch*,
+    1. Write your codes which fix the issue you found
+    1. Commit and push the branch you created
+    1. Raise a pull request, comparing your new created branch with our original master branch [here](https://github.com/nezago/phone-history-store-frontend)
 
 ## Author (s)
-> Write your name here and list any other one whou helped you during this project
-
-	* [GitHub username](github-link)
-
-	* [LinkedIn username](linkedin-profile-link)
-
-	* [Twitter username](twitter-profile-link)
-
-
-===> You can find this readme file template [on this link](https://github.com/nezago/nezago-guidelines/wiki/Readme-file-template)
+#### Mugirase Emmanuel (descholar)
+* Github: [@descholar-ceo](https://github.com/descholar-ceo)
+* Twitter: [@descholar3](https://twitter.com/descholar3)
+* LinkedIn: [MUGIRASE Emmanuel](linkedin.com/in/mugirase-emmanuel-a90b49143)
