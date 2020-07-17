@@ -53,14 +53,15 @@ There two ways of contributing to this project:
 
 1.  If you see something wrong or not working, please check [the issue tracker section](https://github.com/nezago/phone-history-store-frontend/issues), if that problem you met is not in already opened issues then open the issue by click on issue button
 
-2.  If you have a solution to that, follow the below steps to contribute:
-    1.  Fork this repository
-    2.  Clone it on your local computer by running `git clone https://github.com/your-username/phone-history-store-frontend.git` __Replace *your username* with the username you use on github__
-    3.  Open the cloned repository which appears as a folder on your local computer with your favorite code editor
-    4.  Create a separate branch off the *master barnch*,
-    5.  Write your codes which fix the issue you found
-    6.  Commit and push the branch you created
-    7.  Raise a pull request, comparing your new created branch with our original master branch [here](https://github.com/nezago/phone-history-store-frontend)
+2.  If you have a solution to that, and willing to work on it, follow the below steps to contribute:
+    1.  Go on [pivotal tracker](https://www.pivotaltracker.com/n/projects/2442078) and create a story for that
+    2.  Fork this repository
+    3.  Clone it on your local computer by running `git clone https://github.com/your-username/phone-history-store-frontend.git` __Replace *your username* with the username you use on github__
+    4.  Open the cloned repository which appears as a folder on your local computer with your favorite code editor
+    5.  Create a separate branch off the *master barnch*,
+    6.  Write your codes which fix the issue you found
+    7.  Commit and push the branch you created
+    8.  Raise a pull request, comparing your new created branch with our original master branch [here](https://github.com/nezago/phone-history-store-frontend)
 
 ## Author (s)
 ### Mugirase Emmanuel (descholar)
