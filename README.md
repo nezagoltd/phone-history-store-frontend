@@ -28,19 +28,23 @@ The main logic is that whenever you make, receive, or miss a new call this app w
 1. [Codeclimate](https://codeclimate.com/)
 
 ## Running and testing it locally
-To have a local copy up and running of this project just follow the following step
+To have a local copy up and running of this project just follow the following steps:
 
 ### Prerequisites
-> What should I have already to run this project locally?
+1. [NodeJS version 10 or higher](https://nodejs.org/en/)
+1. You need to have either Android or iPhone dev environment set on your local machine
 
 ### Setup
-> How should setup this project on my local computer?
+1. Clone this Repository by running `git clone https://github/nezago/phone-history-store-frontend.git`
+1. Go inside the cloned Repository by running `cd phone-history-store-frontend`
+1. Install all needed dependecies by running `npm install`
 
 ### Usage
-> How to use it? //Which command should I run or how to start this project?
+1. Run `npm start` => To start local server
+1. Run `npm run android` => To run this app on android device or `npm run ios` to run this app on ios devices
 
 ### Tests
-> How to run tests locally?
+~~1. Run `npm test` => To run test suites on your local machine~~
 
 ## Contributions
 > How should I contribute? //Specify steps to follow inorder to contribute to this project, if it is allowed.
