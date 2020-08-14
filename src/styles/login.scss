@@ -22,6 +22,7 @@ $white: rgb(255,255,255);
     text-align: center;
     padding: 1%;
     margin-bottom: 10px;
+    font-size: 14px;
 }
 
 .btn-primary{
@@ -34,6 +35,7 @@ $white: rgb(255,255,255);
     margin-bottom: 10px;
     margin: 0 auto;
     padding: 5px 10px 5px 10px;
+    font-size: 10px;
 }
 
 .login-signup{
@@ -47,4 +49,10 @@ $white: rgb(255,255,255);
 .login-form{
     width: 100%;
     margin-bottom: 50px;
+}
+
+.text-login{
+    color: $white;
+    font-size: 14px;
+    text-align: center;
 }

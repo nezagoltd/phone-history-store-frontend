@@ -53,7 +53,7 @@ class LoginScreen extends Component {
               style={myMystyles["btn-primary"]}
               onPress={() => this.handleLogin(this)}
             >
-              <Text style={allStyles.nextText}>Login</Text>
+              <Text style={myMystyles["text-login"]}>Login</Text>
             </TouchableOpacity>
           </View>
 
@@ -62,7 +62,7 @@ class LoginScreen extends Component {
               style={myMystyles["btn-primary"]}
               onPress={() => navigation.navigate('WelcomeScreen')}
             >
-              <Text style={allStyles.nextText}>Signup</Text>
+              <Text style={myMystyles["text-login"]}>Signup</Text>
             </TouchableOpacity>
           </View>
           </View>
