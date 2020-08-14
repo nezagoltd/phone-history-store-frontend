@@ -55,7 +55,6 @@ class LoginScreen extends Component {
             </TouchableOpacity>
           </View>
           <View style={{ marginTop: 'auto' }}>
-            <Text style={allStyles.nextText}>If you do not have an account</Text>
             <TouchableOpacity
               style={allStyles.nextBtn}
               onPress={() => navigation.navigate('WelcomeScreen')}
