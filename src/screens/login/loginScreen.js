@@ -3,6 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, ScrollView } from 'react-nativ
 import PropTypes from 'prop-types';
 import styles from '../../styles/allStyles';
 import handleLogin from '../../handlers/handleLogin';
+import myMystyles from '../../styles/login.scss'
 
 
 const { allStyles } = styles;
@@ -28,7 +29,7 @@ class LoginScreen extends Component {
   render() {
     const { navigation } = this.props;
     return (
-      <View style={allStyles.signupFormContainer}>
+      <View style={myMystyles["login-screen"]}>
         <ScrollView>
 
           <View style={{ marginBottom: 100 }}>
