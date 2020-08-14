@@ -24,6 +24,18 @@ $white: rgb(255,255,255);
     margin-bottom: 10px;
 }
 
+.btn-primary{
+    border-radius: 100px;
+    border: 1px solid $secondary;
+    width: 50%;
+    text-align: center;
+    padding: 1%;
+    background-color: $third;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    padding: 5px 10px 5px 10px;
+}
+
 .login-signup{
     padding: 2%;
     width: 95%;

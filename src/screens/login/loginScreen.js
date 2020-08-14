@@ -33,6 +33,7 @@ class LoginScreen extends Component {
         <View style={myMystyles["login-signup"]}>
           <View style={myMystyles["login-form"]}>
             <Text style={allStyles.signupTitle}>Login here</Text>
+
             <TextInput
               style={myMystyles["text-input"]}
               placeholder="Enter your phone number"
@@ -40,14 +41,16 @@ class LoginScreen extends Component {
               onChangeText={(text) => this.setState({ phoneNumber: text })}
               keyboardType="phone-pad"
             />
+
             <TextInput
               style={myMystyles["text-input"]}
               placeholder="Enter your password here"
               placeholderTextColor="rgb(255,255,255)"
               onChangeText={(text) => this.setState({ password: text })}
             />
+
             <TouchableOpacity
-              style={allStyles.nextBtn}
+              style={myMystyles["btn-primary"]}
               onPress={() => this.handleLogin(this)}
             >
               <Text style={allStyles.nextText}>Login</Text>
@@ -56,7 +59,7 @@ class LoginScreen extends Component {
 
           <View style={{ marginTop: 'auto' }}>
             <TouchableOpacity
-              style={allStyles.nextBtn}
+              style={myMystyles["btn-primary"]}
               onPress={() => navigation.navigate('WelcomeScreen')}
             >
               <Text style={allStyles.nextText}>Signup</Text>
