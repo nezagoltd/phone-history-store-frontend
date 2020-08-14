@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { View, Text, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import styles from '../../styles/allStyles';
 import handleLogin from '../../handlers/handleLogin';
-
+import getUserData from '../../actions/getUserData';
 
 const { allStyles } = styles;
 /**
@@ -70,6 +71,17 @@ class LoginScreen extends Component {
 
 LoginScreen.propTypes = {
   navigation: PropTypes.object.isRequired,
+  myData: PropTypes.object.isRequired,
+  getUserData: PropTypes.func.isRequired,
 };
 
-export default LoginScreen;
+/**
+ *
+ * @param {*} state
+ * @returns {*} state
+ */
+const mapStateToProps = (state) => ({
+  myData: state.myReducers,
+});
+
+export default connect(mapStateToProps, { getUserData })(LoginScreen);
