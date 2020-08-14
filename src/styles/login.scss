@@ -1,6 +1,10 @@
-$color: rgb(255,0,0);
+$primary: rgb(90,100,100);
+$white: rgb(255,255,255);
 
-.full-screen-container {
+.login-screen {
     height: 100%;
     width: 100%;
+    padding: 3%;
+    background-color: $primary;
+    color: $white;
 }
