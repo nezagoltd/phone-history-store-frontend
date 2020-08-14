@@ -3,7 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, ScrollView } from 'react-nativ
 import PropTypes from 'prop-types';
 import styles from '../../styles/allStyles';
 import handleLogin from '../../handlers/handleLogin';
-// import '../../../assets/'
+import myMystyles from '../../styles/login.scss'
 
 
 const { allStyles } = styles;
@@ -60,7 +60,7 @@ class LoginScreen extends Component {
               style={allStyles.nextBtn}
               onPress={() => navigation.navigate('WelcomeScreen')}
             >
-              <Text style={allStyles.nextText}>Get started here</Text>
+              <Text style={myMystyles.myClass}>Get started here</Text>
             </TouchableOpacity>
           </View>
         </ScrollView>
