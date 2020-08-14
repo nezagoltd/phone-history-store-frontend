@@ -30,7 +30,6 @@ class LoginScreen extends Component {
     const { navigation } = this.props;
     return (
       <View style={myMystyles["login-screen"]}>
-        <ScrollView>
 
           <View style={{ marginBottom: 100 }}>
             <Text style={allStyles.signupTitle}>Login here</Text>
@@ -54,15 +53,15 @@ class LoginScreen extends Component {
               <Text style={allStyles.nextText}>Login</Text>
             </TouchableOpacity>
           </View>
+          
           <View style={{ marginTop: 'auto' }}>
             <TouchableOpacity
               style={allStyles.nextBtn}
               onPress={() => navigation.navigate('WelcomeScreen')}
             >
-              <Text style={allStyles.nextText}>Get started here</Text>
+              <Text style={allStyles.nextText}>Signup</Text>
             </TouchableOpacity>
           </View>
-        </ScrollView>
       </View>
     );
   }

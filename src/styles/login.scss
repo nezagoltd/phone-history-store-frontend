@@ -7,6 +7,8 @@ $white: rgb(255,255,255);
     padding: 3%;
     background-color: $primary;
     color: $white;
+    display: flex;
+    flex-direction: column;
 }
 
 .text-input {
