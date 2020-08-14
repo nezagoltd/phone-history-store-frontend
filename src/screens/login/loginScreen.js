@@ -29,7 +29,7 @@ class LoginScreen extends Component {
   render() {
     const { navigation } = this.props;
     return (
-      <View style={myMystyles.["full-screen-container"]}>
+      <View style={myMystyles["full-screen-container"]}>
         <ScrollView>
 
           <View style={{ marginBottom: 100 }}>
