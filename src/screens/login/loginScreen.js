@@ -30,10 +30,10 @@ class LoginScreen extends Component {
     const { navigation } = this.props;
     return (
       <View style={myMystyles["login-screen"]}>
-        <ScrollView>
-
-          <View style={{ marginBottom: 100 }}>
+        <View style={myMystyles["login-signup"]}>
+          <View style={myMystyles["login-form"]}>
             <Text style={allStyles.signupTitle}>Login here</Text>
+
             <TextInput
               style={myMystyles["text-input"]}
               placeholder="Enter your phone number"
@@ -41,29 +41,31 @@ class LoginScreen extends Component {
               onChangeText={(text) => this.setState({ phoneNumber: text })}
               keyboardType="phone-pad"
             />
+
             <TextInput
               style={myMystyles["text-input"]}
               placeholder="Enter your password here"
               placeholderTextColor="rgb(255,255,255)"
               onChangeText={(text) => this.setState({ password: text })}
             />
+
             <TouchableOpacity
-              style={allStyles.nextBtn}
+              style={myMystyles["btn-primary"]}
               onPress={() => this.handleLogin(this)}
             >
-              <Text style={allStyles.nextText}>Login</Text>
+              <Text style={myMystyles["text-login"]}>Login</Text>
             </TouchableOpacity>
           </View>
+
           <View style={{ marginTop: 'auto' }}>
-            <Text style={allStyles.nextText}>If you do not have an account</Text>
             <TouchableOpacity
-              style={allStyles.nextBtn}
+              style={myMystyles["btn-primary"]}
               onPress={() => navigation.navigate('WelcomeScreen')}
             >
-              <Text style={allStyles.nextText}>Get started here</Text>
+              <Text style={myMystyles["text-login"]}>Signup</Text>
             </TouchableOpacity>
           </View>
-        </ScrollView>
+          </View>
       </View>
     );
   }

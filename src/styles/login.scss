@@ -1,15 +1,54 @@
-$primary: rgb(90,100,100);
-$white: rgb(255,255,255);
+@import 'variables';
 
 .login-screen {
-    height: 100%;
-    width: 100%;
-    padding: 3%;
-    background-color: $primary;
-    color: $white;
+  height: 100%;
+  width: 100%;
+  padding: 1%;
+  background-color: $primary;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-input {
-    border-radius: 100px;
-    border: 1px solid $white;
+  border-radius: 100%;
+  border: 1px solid $white;
+  width: 100%;
+  text-align: center;
+  padding: 1%;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: $white;
+}
+
+.btn-primary {
+  border-radius: 100px;
+  border: 1px solid $secondary;
+  width: 50%;
+  text-align: center;
+  background-color: $third;
+  margin: 0 auto 10px auto;
+  padding: 5px 10px 5px 10px;
+  font-size: 10px;
+}
+
+.login-signup {
+  padding: 2%;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.text-login {
+  color: $white;
+  font-size: 14px;
+  text-align: center;
 }
