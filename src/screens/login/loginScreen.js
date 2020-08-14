@@ -35,14 +35,14 @@ class LoginScreen extends Component {
           <View style={{ marginBottom: 100 }}>
             <Text style={allStyles.signupTitle}>Login here</Text>
             <TextInput
-              style={allStyles.signupInput}
+              style={myMystyles["text-input"]}
               placeholder="Enter your phone number"
               placeholderTextColor="rgb(255,255,255)"
               onChangeText={(text) => this.setState({ phoneNumber: text })}
               keyboardType="phone-pad"
             />
             <TextInput
-              style={allStyles.signupInput}
+              style={myMystyles["text-input"]}
               placeholder="Enter your password here"
               placeholderTextColor="rgb(255,255,255)"
               onChangeText={(text) => this.setState({ password: text })}
