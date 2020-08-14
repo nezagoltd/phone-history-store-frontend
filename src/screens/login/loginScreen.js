@@ -60,7 +60,7 @@ class LoginScreen extends Component {
               style={allStyles.nextBtn}
               onPress={() => navigation.navigate('WelcomeScreen')}
             >
-              <Text style={myMystyles.myClass}>Get started here</Text>
+              <Text style={allStyles.nextText}>Get started here</Text>
             </TouchableOpacity>
           </View>
         </ScrollView>
