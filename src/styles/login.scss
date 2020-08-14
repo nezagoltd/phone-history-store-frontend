@@ -1,59 +1,59 @@
-$primary: rgb(90,100,100);
+$primary: rgb(90, 100, 100);
 $secondary: rgb(129, 172, 172);
 $third: rgb(31, 44, 44);
-$white: rgb(255,255,255);
+$white: rgb(255, 255, 255);
 
 .login-screen {
-    height: 100%;
-    width: 100%;
-    padding: 1%;
-    background-color: $primary;
-    color: $white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 1%;
+  background-color: $primary;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-input {
-    border-radius: 100px;
-    border: 1px solid $white;
-    width: 100%;
-    text-align: center;
-    padding: 1%;
-    margin-bottom: 10px;
-    font-size: 14px;
-    color: $white;
+  border-radius: 100px;
+  border: 1px solid $white;
+  width: 100%;
+  text-align: center;
+  padding: 1%;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: $white;
 }
 
-.btn-primary{
-    border-radius: 100px;
-    border: 1px solid $secondary;
-    width: 50%;
-    text-align: center;
-    padding: 1%;
-    background-color: $third;
-    margin-bottom: 10px;
-    margin: 0 auto;
-    padding: 5px 10px 5px 10px;
-    font-size: 10px;
+.btn-primary {
+  border-radius: 100px;
+  border: 1px solid $secondary;
+  width: 50%;
+  text-align: center;
+  padding: 1%;
+  background-color: $third;
+  margin-bottom: 10px;
+  margin: 0 auto;
+  padding: 5px 10px 5px 10px;
+  font-size: 10px;
 }
 
-.login-signup{
-    padding: 2%;
-    width: 95%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.login-signup {
+  padding: 2%;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.login-form{
-    width: 100%;
-    margin-bottom: 50px;
+.login-form {
+  width: 100%;
+  margin-bottom: 50px;
 }
 
-.text-login{
-    color: $white;
-    font-size: 14px;
-    text-align: center;
+.text-login {
+  color: $white;
+  font-size: 14px;
+  text-align: center;
 }
