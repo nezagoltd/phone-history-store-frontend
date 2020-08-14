@@ -30,8 +30,8 @@ class LoginScreen extends Component {
     const { navigation } = this.props;
     return (
       <View style={myMystyles["login-screen"]}>
-
-          <View style={{ marginBottom: 100 }}>
+        <View style={myMystyles["login-signup"]}>
+          <View style={myMystyles["login-form"]}>
             <Text style={allStyles.signupTitle}>Login here</Text>
             <TextInput
               style={myMystyles["text-input"]}
@@ -53,7 +53,7 @@ class LoginScreen extends Component {
               <Text style={allStyles.nextText}>Login</Text>
             </TouchableOpacity>
           </View>
-          
+
           <View style={{ marginTop: 'auto' }}>
             <TouchableOpacity
               style={allStyles.nextBtn}
@@ -61,6 +61,7 @@ class LoginScreen extends Component {
             >
               <Text style={allStyles.nextText}>Signup</Text>
             </TouchableOpacity>
+          </View>
           </View>
       </View>
     );

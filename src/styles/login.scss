@@ -1,5 +1,8 @@
 $primary: rgb(90,100,100);
+$secondary: rgb(129, 172, 172);
+$third: rgb(31, 44, 44);
 $white: rgb(255,255,255);
+
 
 .login-screen {
     height: 100%;
@@ -9,6 +12,7 @@ $white: rgb(255,255,255);
     color: $white;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -16,4 +20,20 @@ $white: rgb(255,255,255);
     border-radius: 100px;
     border: 1px solid $white;
     width: 100%;
+}
+
+.login-signup{
+    background-color: $third;
+    padding: 2%;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form{
+    background-color: $secondary;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 50px;
 }
